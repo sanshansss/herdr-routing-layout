@@ -4,10 +4,17 @@
 右侧是 Magpie routing 实时面板，顶部标签栏带有 skillshare 面板开关。
 
 - 布局名：`magpie-routing-v1`
-- 包版本：见 [`VERSION`](VERSION)（当前 `1.0.0`）
-- 预览：`layouts/magpie-routing-v1.svg`（示意预览，不含任何个人空间、机器名或目录）
+- 包版本：见 [`VERSION`](VERSION)（当前 `1.0.1`）
+- README 截图：`layouts/layout.png` 与 `layouts/contextwindow.png`（已对个人及项目内容做马赛克）
+- Herdr 布局选择器仍使用 `layouts/magpie-routing-v1.svg` 作为小型预览图。
 
-![Magpie Routing v1](layouts/magpie-routing-v1.svg)
+### 主布局
+
+![Magpie Routing 主布局](layouts/layout.png)
+
+### Context window
+
+![Magpie Routing Context window](layouts/contextwindow.png)
 
 ## 目录结构
 
@@ -17,7 +24,9 @@ herdr-routing-layout/
   README.md
   layouts/
     magpie-routing-v1.json     新布局（复制自当前 herdr-skillshare 布局并固化当前尺寸）
-    magpie-routing-v1.svg      设置页显示用的示意预览
+    magpie-routing-v1.svg      Herdr 布局选择器使用的示意预览
+    layout.png                 已打码的完整 Routing 布局截图
+    contextwindow.png          已打码的 Context window 截图
   mods/
     routing/                   非内置：Magpie routing 面板
       main.js
@@ -152,8 +161,8 @@ herdr-app status
 ## 个人数据审查
 
 - 布局 JSON 中**没有**空格名、机器名、项目名或目录名；所有内容都来自用户运行时环境。
-- 原始 `herdr-skillshare.png` 截图包含个人空间、机器名、项目名和目录路径，
-  **未打包**；本包改用不含个人信息的 `magpie-routing-v1.svg` 示意图。
+- 原始界面截图含个人空间、机器名、项目名、目录路径、会话 ID 与终端内容，**未打包**。
+  README 所用两张新截图已对这些信息做马赛克；Herdr 布局选择器仍保留不含个人信息的 SVG 示意图。
 - 三个 mod 中未发现硬编码的用户目录、用户名或机器名。`routing` 通过 `home()` 推导
   `~/.config/magpie/routing`，`skillshare` 通过当前聚焦空间和 CLI 动态读取。
 - 如果要在团队内分享，仍建议在安装前用自己的数据跑一次 `herdr-app check` 与界面确认。
@@ -174,6 +183,7 @@ Herdr 还会在 `layouts/.state/magpie-routing-v1.json` 保存点击状态，可
 
 ## 版本记录
 
+- `1.0.1` — README 预览替换为两张已打码的真实界面截图：主 Routing 布局和 Context window。保留 SVG 仅供 Herdr 布局选择器使用。
 - `1.0.0` — 首个发布包。基于当前 `herdr-skillshare` 布局；固化侧栏 431px、routing 329px、
   skillshare 面板默认隐藏与 paper/graphite 主题；打包 `routing`、`skillshare`、`tabs-routing`
   三个非内置 mods；移除含个人信息的截图预览。
