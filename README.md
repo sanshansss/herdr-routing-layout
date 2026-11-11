@@ -2,6 +2,8 @@
 
 这个布局基于 `herdr-skillshare`，加入 Magpie 路由面板：在 Files、Changes 旁开关 Routing，查看实时路由和按会话选择的 Context window。Skillshare 面板保留，默认隐藏。
 
+Gallery 收录文件位于 [`magpie-routing-v1/`](magpie-routing-v1/)。
+
 ## 截图
 
 ![Herdr Routing 布局](layouts/layout.png)
