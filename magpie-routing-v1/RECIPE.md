@@ -25,7 +25,11 @@ The animation follows Magpie's Routing design. GPUI does not expose arbitrary-pa
 
 ## Install
 
-Tested with Herdr app 0.1.14. Copy `layouts/magpie-routing-v1.json` and `layouts/magpie-routing-v1.svg` into Herdr's `layouts/` folder, and the three folders under `mods/` into Herdr's `mods/`. Back up any same-named mods before replacing them. Switch to the layout and run `herdr-app check` on each mod.
+Tested with Herdr app 0.1.14. Give this prompt to an agent that can access your local Herdr configuration:
+
+```text
+Read ~/.config/herdr-app/AGENTS.md, then get magpie-routing-v1/ from https://github.com/sanshansss/herdr-routing-layout and follow its RECIPE.md to install the layout and required mods. Check for and back up same-named files first; do not change unrelated settings. Run herdr-app check and herdr-app status, then switch to this layout.
+```
 
 Routing data appears when Magpie is writing local routing JSONL files. Skillshare features require the `skillshare` CLI.
 

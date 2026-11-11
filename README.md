@@ -22,15 +22,10 @@ Gallery 收录文件位于 [`magpie-routing-v1/`](magpie-routing-v1/)。
 
 ## 安装
 
-已在 Herdr app 0.1.14 验证。Routing 数据来自 Magpie 的 `~/.config/magpie/routing/*.jsonl`；没有日志时面板会显示空状态。
+已在 Herdr app 0.1.14 验证。把下面提示词交给能访问本机 Herdr 配置的 Agent：
 
-把包内 `layouts/magpie-routing-v1.json`、`layouts/magpie-routing-v1.svg` 复制到 Herdr 的 `layouts/`，把 `mods/routing`、`mods/skillshare`、`mods/tabs-routing` 复制到 `mods/`。如有同名目录，先备份再替换。
-
-切换到新布局后检查 mod（将路径替换为你的 Herdr 配置目录）：
-
-```sh
-herdr-app check "<HerdrHome>/mods/routing"
-herdr-app check "<HerdrHome>/mods/skillshare"
-herdr-app check "<HerdrHome>/mods/tabs-routing"
-herdr-app status
+```text
+读 ~/.config/herdr-app/AGENTS.md，然后从 https://github.com/sanshansss/herdr-routing-layout 获取 magpie-routing-v1/，按其中 RECIPE.md 安装布局和所需 mods。先检查并备份同名文件，不要改动其他配置；安装后运行 herdr-app check 和 herdr-app status，确认无错误后切换到这个布局。
 ```
+
+Routing 数据来自 Magpie 的 `~/.config/magpie/routing/*.jsonl`；没有日志时面板会显示空状态。
